@@ -20,7 +20,18 @@ function getCommentsByLikes(minLikes) {
   });
 }
 
+function addNewComment(id, text) {
+  const newComment = {
+    id,
+    text,
+    like: 0,
+  };
+  comments.push(newComment);
+  return newComment;
+}
+
 module.exports = {
   getAllComments,
   getCommentsByLikes,
+  addNewComment,
 };
